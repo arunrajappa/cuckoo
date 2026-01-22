@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>cuckoo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="mist mist-one"></div>
+      <div class="mist mist-two"></div>
+
+      <section class="card">
+        <div class="app-title">cuckoo</div>
+        <header class="header">
+          <p class="eyebrow">Session intention</p>
+          <input
+            class="intent-input"
+            id="intentInput"
+            type="text"
+            maxlength="60"
+            placeholder="Breathe slowly and return to stillness"
+          />
+        </header>
+
+        <div class="timer">
+          <div class="time" id="timeDisplay">05:00</div>
+          <div class="timer-subtitle" id="timerSubtitle">Ready to begin</div>
+        </div>
+
+        <div class="presets" aria-label="Choose a duration">
+          <button class="preset active" data-duration="300">5 min</button>
+          <button class="preset" data-duration="600">10 min</button>
+          <button class="preset" data-duration="900">15 min</button>
+          <button class="preset" data-duration="1200">20 min</button>
+          <button class="preset" data-duration="1500">25 min</button>
+          <button class="preset" data-duration="1800">30 min</button>
+          <button class="preset" data-duration="2700">45 min</button>
+          <button class="preset" data-duration="3600">60 min</button>
+        </div>
+
+        <div class="controls">
+          <button class="btn primary" id="startButton">Start</button>
+          <button class="btn ghost" id="checkinButton" disabled>Check-in</button>
+        </div>
+
+        <div class="checkin-log" id="checkinLog">
+          <p class="checkin-title">Check-ins</p>
+          <div class="checkin-list" id="checkinList">
+            <span class="empty">None yet</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="report" id="reportPanel" aria-live="polite">
+        <div class="report-card">
+          <h2>Session complete</h2>
+          <p class="report-intent" id="reportIntent">Your intention</p>
+          <div class="report-summary">
+            <div>
+              <span class="label">Session length</span>
+              <span class="value" id="reportLength">05:00</span>
+            </div>
+            <div>
+              <span class="label">Check-ins</span>
+              <span class="value" id="reportCount">0</span>
+            </div>
+          </div>
+          <div class="report-list" id="reportList"></div>
+          <button class="btn primary" id="restartButton">Start another</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        Crafted with love by appa &middot; Created 22-01-2026
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
